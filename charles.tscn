@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dpqchvhty2bu"]
+[gd_scene load_steps=7 format=3 uid="uid://dpqchvhty2bu"]
 
 [ext_resource type="Script" path="res://charles.gd" id="1_4ekoa"]
 [ext_resource type="Texture2D" uid="uid://cp4l0pmq67m5p" path="res://Minifantasy_Monster_Creatures_v1.0/Minifantasy_Monster_Creatures_Assets/Angel_of_Death/AngelOfDeathIdle.png" id="1_nkp3m"]
@@ -41,6 +41,10 @@ _data = {
 "charles_animation": SubResource("Animation_2yyax")
 }
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vurdt"]
+radius = 21.0
+height = 64.0
+
 [node name="Charles" type="Node2D"]
 script = ExtResource("1_4ekoa")
 
@@ -51,6 +55,30 @@ libraries = {
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
+position = Vector2(0, -1)
 texture = ExtResource("1_nkp3m")
 hframes = 6
 vframes = 6
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-180.5, 26)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(180.5, -12)
+shape = SubResource("CapsuleShape2D_vurdt")
+
+[node name="QuestBoard" type="Node2D" parent="."]
+
+[node name="Bring" type="Label" parent="."]
+visible = false
+texture_filter = 1
+offset_left = -81.5
+offset_top = -43.0
+offset_right = 92.5
+offset_bottom = -20.0
+text = "BRING ME SACRIFICES"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

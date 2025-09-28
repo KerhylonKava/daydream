@@ -165,18 +165,12 @@ shape = SubResource("RectangleShape2D_8qfci")
 position = Vector2(208, 131.5)
 shape = SubResource("RectangleShape2D_6n3y2")
 
-[node name="Charles2" parent="." instance=ExtResource("2_7y2lc")]
-position = Vector2(-13, -31)
-
-[node name="TastePrefs" type="VBoxContainer" parent="Charles2"]
-offset_left = 15.0
-offset_top = 51.0
-offset_right = 55.0
-offset_bottom = 91.0
+[node name="TastePrefs" type="VBoxContainer" parent="Premade"]
+offset_left = -7.0
+offset_top = 36.0
+offset_right = 33.0
+offset_bottom = 76.0
 metadata/_edit_use_anchors_ = true
-
-[node name="Camera2D" type="Camera2D" parent="Charles2"]
-position = Vector2(1, 15)
 
 [node name="Human" parent="." instance=ExtResource("4_2276v")]
 position = Vector2(-152, -94)
@@ -185,3 +179,10 @@ position = Vector2(-152, -94)
 position = Vector2(182, -25)
 
 [node name="Player" parent="." instance=ExtResource("5_xao1a")]
+position = Vector2(12, 45)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(-12, -16)
+
+[node name="Charles" parent="." instance=ExtResource("2_7y2lc")]
+position = Vector2(-14, -36)
