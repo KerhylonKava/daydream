@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bnddbgdhjd513"]
+[gd_scene load_steps=6 format=3 uid="uid://dpqchvhty2bu"]
 
 [ext_resource type="Script" path="res://charles.gd" id="1_4ekoa"]
 [ext_resource type="Texture2D" uid="uid://cp4l0pmq67m5p" path="res://Minifantasy_Monster_Creatures_v1.0/Minifantasy_Monster_Creatures_Assets/Angel_of_Death/AngelOfDeathIdle.png" id="1_nkp3m"]

@@ -15,12 +15,11 @@ func _process(delta: float) -> void:
 #@onready var texture : texture
 #@onready var personality : personality
 
-func refresh_tastes(profile):
-	if profile == 1:
-		taste = "sweet"
-		texture = "crunchy"
-		personality = "scared"
-	elif profile == 2:
-		taste = "salty"
-		texture = "chewy"
-		personality = "violent"
+#func refresh_tastes(profile):
+#	if profile == 1:
+#		texture = "crunchy"
+#		personality = "scared"
+#	elif profile == 2:
+#		taste = "salty"
+#		texture = "chewy"
+#		personality = "violent"
