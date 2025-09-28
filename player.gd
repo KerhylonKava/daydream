@@ -32,12 +32,15 @@ func _process(delta: float) -> void:
 	elif Input.is_action_pressed("up"):
 		#$SootSpriteImage.flip_h = false
 		velocity.y = -speed * delta
+		$AnimationPlayer.play("player_walk")
 		$BrainSlayerDiagonalAttack.visible = false
 		$BrainSlayerWalk.visible = true
 	
 	elif Input.is_action_pressed("down"):
+		$AnimationPlayer.play("player_walk")
 		#$SootSpriteImage.flip_h = false
 		$BrainSlayerDiagonalAttack.visible = false
+		$BrainSlayerWalk.visible = true
 		velocity.y = speed * delta
 	elif Input.is_action_pressed("x"):
 		$BrainSlayerDiagonalAttack.visible = true
@@ -56,5 +59,5 @@ func _process(delta: float) -> void:
 		if velocity.x == 0:
 			velocity.y -= 0.15 * velocity.y * delta / 0.0166
 		if velocity.x and velocity.y == 0:
-			$AnimationPlayer.play("player_idle")
+			$AnimationPlayer.stop
 	move_and_slide()
