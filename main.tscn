@@ -5,8 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://0abfdkcnijf" path="res://giant.tscn" id="3_88vo3"]
 [ext_resource type="PackedScene" uid="uid://ckut43a7u1eww" path="res://node_2d.tscn" id="4_2276v"]
 [ext_resource type="PackedScene" uid="uid://cnnfvmwxppk71" path="res://player.tscn" id="5_xao1a"]
-[ext_resource type="Script" path="res://character.gd" id="5_ypf2q"]
-[ext_resource type="Texture2D" uid="uid://65b3xhnm2gq" path="res://icon.svg" id="6_tey24"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4futw"]
 size = Vector2(6, 120.5)
@@ -77,91 +75,95 @@ texture_filter = 1
 position = Vector2(9, -16)
 texture = ExtResource("2_1tkgn")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Premade"]
+[node name="Area2D" type="Area2D" parent="Premade"]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Premade/Area2D"]
 position = Vector2(-112, -64.25)
 shape = SubResource("RectangleShape2D_4futw")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Premade"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Premade/Area2D"]
 position = Vector2(-176.5, 48)
 shape = SubResource("RectangleShape2D_fh3db")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Premade"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Premade/Area2D"]
 position = Vector2(-75.625, 89)
 shape = SubResource("RectangleShape2D_30wtv")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Premade"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Premade/Area2D"]
 position = Vector2(-220.5, 14)
 shape = SubResource("RectangleShape2D_tgrx7")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="Premade"]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Premade/Area2D"]
 position = Vector2(-48.5, 139)
 shape = SubResource("RectangleShape2D_3spgs")
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="Premade"]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Premade/Area2D"]
 position = Vector2(78, 168)
 shape = SubResource("RectangleShape2D_owllk")
 
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="Premade"]
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Premade/Area2D"]
 position = Vector2(78, 168)
 shape = SubResource("RectangleShape2D_owllk")
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="Premade"]
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Premade/Area2D"]
 position = Vector2(220, 80.5)
 shape = SubResource("RectangleShape2D_71f34")
 
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="Premade"]
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Premade/Area2D"]
 position = Vector2(148, 81)
 shape = SubResource("RectangleShape2D_71f34")
 
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="Premade"]
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Premade/Area2D"]
 position = Vector2(240, 24)
 shape = SubResource("RectangleShape2D_v6att")
 
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="Premade"]
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Premade/Area2D"]
 position = Vector2(128.25, 25)
 shape = SubResource("RectangleShape2D_v6att")
 
-[node name="CollisionShape2D12" type="CollisionShape2D" parent="Premade"]
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Premade/Area2D"]
 position = Vector2(185.5, -32.75)
 shape = SubResource("RectangleShape2D_lx2gs")
 
-[node name="CollisionShape2D13" type="CollisionShape2D" parent="Premade"]
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Premade/Area2D"]
 position = Vector2(80, 100)
 shape = SubResource("RectangleShape2D_nopa7")
 
-[node name="CollisionShape2D14" type="CollisionShape2D" parent="Premade"]
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Premade/Area2D"]
 position = Vector2(64.25, -3)
 shape = SubResource("RectangleShape2D_nix5j")
 
-[node name="CollisionShape2D15" type="CollisionShape2D" parent="Premade"]
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Premade/Area2D"]
 position = Vector2(-23, -79.5)
 shape = SubResource("RectangleShape2D_ubvp8")
 
-[node name="CollisionShape2D16" type="CollisionShape2D" parent="Premade"]
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Premade/Area2D"]
 position = Vector2(-223, -71)
 shape = SubResource("RectangleShape2D_ebv8i")
 
-[node name="CollisionShape2D17" type="CollisionShape2D" parent="Premade"]
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Premade/Area2D"]
 position = Vector2(-167, -131.5)
 shape = SubResource("RectangleShape2D_tvayx")
 
-[node name="CollisionShape2D18" type="CollisionShape2D" parent="Premade"]
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="Premade/Area2D"]
 position = Vector2(-132.5, 0.75)
 shape = SubResource("RectangleShape2D_3cyp3")
 
-[node name="CollisionShape2D19" type="CollisionShape2D" parent="Premade"]
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="Premade/Area2D"]
 position = Vector2(-112.125, 67.25)
 shape = SubResource("RectangleShape2D_oyd13")
 
-[node name="CollisionShape2D20" type="CollisionShape2D" parent="Premade"]
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="Premade/Area2D"]
 position = Vector2(-2, 88)
 shape = SubResource("RectangleShape2D_dtkpe")
 
-[node name="CollisionShape2D21" type="CollisionShape2D" parent="Premade"]
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="Premade/Area2D"]
 position = Vector2(-187, 0)
 shape = SubResource("RectangleShape2D_8qfci")
 
-[node name="CollisionShape2D22" type="CollisionShape2D" parent="Premade"]
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="Premade/Area2D"]
 position = Vector2(208, 131.5)
 shape = SubResource("RectangleShape2D_6n3y2")
 
@@ -188,12 +190,3 @@ position = Vector2(182, -25)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(-12, -16)
-[node name="character" type="CharacterBody2D" parent="."]
-script = ExtResource("5_ypf2q")
-
-[node name="Sprite2D" type="Sprite2D" parent="character"]
-position = Vector2(21, -20)
-scale = Vector2(0.132813, 0.132813)
-texture = ExtResource("6_tey24")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="character"]
