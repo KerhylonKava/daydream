@@ -67,15 +67,16 @@ position = Vector2(-180.5, 26)
 position = Vector2(180.5, -12)
 shape = SubResource("CapsuleShape2D_vurdt")
 
-[node name="Label" type="Label" parent="Area2D"]
-texture_filter = 1
-offset_left = 99.0
-offset_top = -69.0
-offset_right = 268.0
-offset_bottom = -46.0
-text = "BRING ME OFFERINGS"
-
 [node name="QuestBoard" type="Node2D" parent="."]
+
+[node name="Bring" type="Label" parent="."]
+visible = false
+texture_filter = 1
+offset_left = -81.5
+offset_top = -43.0
+offset_right = 92.5
+offset_bottom = -20.0
+text = "Bring me Sacrifices"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -172,12 +172,6 @@ offset_right = 33.0
 offset_bottom = 76.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Charles2" parent="." instance=ExtResource("2_7y2lc")]
-position = Vector2(-13, -31)
-
-[node name="Camera2D" type="Camera2D" parent="Charles2"]
-position = Vector2(1, 15)
-
 [node name="Human" parent="." instance=ExtResource("4_2276v")]
 position = Vector2(-152, -94)
 
@@ -185,6 +179,10 @@ position = Vector2(-152, -94)
 position = Vector2(182, -25)
 
 [node name="Player" parent="." instance=ExtResource("5_xao1a")]
+position = Vector2(12, 45)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(-12, -16)
+
+[node name="Charles" parent="." instance=ExtResource("2_7y2lc")]
+position = Vector2(-10, -29)
