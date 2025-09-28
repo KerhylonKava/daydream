@@ -1,0 +1,91 @@
+[gd_scene load_steps=9 format=3 uid="uid://cnnfvmwxppk71"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_8o0e7"]
+[ext_resource type="Texture2D" uid="uid://53xgcank044e" path="res://Minifantasy_Monster_Creatures_v1.0/Minifantasy_Monster_Creatures_Assets/Brain_Slayer/BrainSlayerIdle.png" id="2_65nyk"]
+[ext_resource type="Texture2D" uid="uid://4k3nyya0yjnh" path="res://Minifantasy_Monster_Creatures_v1.0/Minifantasy_Monster_Creatures_Assets/Brain_Slayer/BrainSlayerWalk.png" id="3_npc0c"]
+
+[sub_resource type="Animation" id="Animation_phulf"]
+resource_name = "player_idle"
+length = 3.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.3, 0.5, 0.7, 0.866667, 1.13333, 1.4, 1.63333, 1.86667, 2.1, 2.33333, 2.56667, 2.8, 3.03333, 3.26667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+}
+
+[sub_resource type="Animation" id="Animation_8154s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BrainSlayerWalk:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_uwlb2"]
+resource_name = "player_walk"
+length = 1.7
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BrainSlayerWalk:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k7o2m"]
+_data = {
+"RESET": SubResource("Animation_8154s"),
+"player_idle": SubResource("Animation_phulf"),
+"player_walk": SubResource("Animation_uwlb2")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5i6dj"]
+radius = 6.0
+height = 22.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_8o0e7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_65nyk")
+hframes = 16
+vframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_k7o2m")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_5i6dj")
+
+[node name="BrainSlayerWalk" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(109, -6)
+texture = ExtResource("3_npc0c")
+hframes = 6
+vframes = 5
