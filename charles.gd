@@ -9,9 +9,10 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if player_in_area:
-		$Label.visible = true
+		$Bring.visible = true
 	elif !player_in_area:
-		$Label.visible = false
+		$Bring.visible = false
+
 	
 @onready var profile = 1
 #@onready var taste : taste
@@ -29,11 +30,9 @@ func _process(delta: float) -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.has_method("player"):
 		player_in_area = true
 		player = body
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
-	if body.has_method("player"):
 		player_in_area = false
