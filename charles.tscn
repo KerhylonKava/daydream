@@ -68,7 +68,6 @@ position = Vector2(180.5, -12)
 shape = SubResource("CapsuleShape2D_vurdt")
 
 [node name="Label" type="Label" parent="Area2D"]
-visible = false
 texture_filter = 1
 offset_left = 99.0
 offset_top = -69.0

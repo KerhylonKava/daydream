@@ -1,5 +1,5 @@
 extends Node2D
-var SootSprite = null
+var player = null
 var player_in_area = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -10,6 +10,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if player_in_area:
 		$Label.visible = true
+	elif !player_in_area:
+		$Label.visible = false
 	
 @onready var profile = 1
 #@onready var taste : taste
@@ -29,6 +31,7 @@ func _process(delta: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.has_method("player"):
 		player_in_area = true
+		player = body
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
