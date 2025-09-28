@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://0abfdkcnijf"]
+[gd_scene load_steps=7 format=3 uid="uid://0abfdkcnijf"]
 
 [ext_resource type="Script" path="res://giant.gd" id="1_1kmwl"]
 [ext_resource type="Texture2D" uid="uid://cgwbalkhmpr6t" path="res://Minifantasy_Monster_Creatures_v1.0/Minifantasy_Monster_Creatures_Assets/Giant/GiantIdle.png" id="1_e18yw"]
@@ -41,6 +41,9 @@ _data = {
 "giant_idle": SubResource("Animation_03o5h")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_s8dif"]
+radius = 9.05539
+
 [node name="Giant" type="Node2D"]
 script = ExtResource("1_1kmwl")
 
@@ -54,3 +57,18 @@ vframes = 6
 libraries = {
 "": SubResource("AnimationLibrary_t6nm2")
 }
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_s8dif")
+
+[node name="x" type="Label" parent="."]
+offset_left = -5.0
+offset_top = -35.0
+offset_right = 35.0
+offset_bottom = -12.0
+text = "X"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
