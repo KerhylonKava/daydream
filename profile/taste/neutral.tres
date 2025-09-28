@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="taste" load_steps=2 format=3 uid="uid://cyvjshnb3tqq2"]
+
+[ext_resource type="Script" path="res://profile/taste/taste.gd" id="1_jjesb"]
+
+[resource]
+script = ExtResource("1_jjesb")
+name = "neutral"

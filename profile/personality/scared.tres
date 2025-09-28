@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="personality" load_steps=2 format=3 uid="uid://bggd7nt457plu"]
+
+[ext_resource type="Script" path="res://profile/personality/personality.gd" id="1_pko08"]
+
+[resource]
+script = ExtResource("1_pko08")
+name = "scared"

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="texture" load_steps=2 format=3 uid="uid://dgkr3akjo0bwn"]
+
+[ext_resource type="Script" path="res://profile/texture/texture.gd" id="1_qye73"]
+
+[resource]
+script = ExtResource("1_qye73")
+name = "sharp"
