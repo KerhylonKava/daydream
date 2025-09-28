@@ -78,7 +78,7 @@ offset_left = -81.5
 offset_top = -43.0
 offset_right = 92.5
 offset_bottom = -20.0
-text = "BRING ME SACRIFICES"
+text = "BRING ME SMALL SACRIFICE"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
