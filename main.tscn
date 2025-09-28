@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://c32x4rkweiuwe"]
+[gd_scene load_steps=3 format=3 uid="uid://c32x4rkweiuwe"]
+
+[ext_resource type="Script" path="res://charles.gd" id="1_8pac5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dhkt8"]
 
@@ -6,6 +8,11 @@
 
 [node name="Charles" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_dhkt8")
+script = ExtResource("1_8pac5")
+
+[node name="TastePrefs" type="VBoxContainer" parent="Charles"]
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="monster1" type="Node2D" parent="."]
 

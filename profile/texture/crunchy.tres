@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="texture" load_steps=2 format=3 uid="uid://bx2urg2fyb6r"]
+
+[ext_resource type="Script" path="res://profile/texture/texture.gd" id="1_frsl2"]
+
+[resource]
+script = ExtResource("1_frsl2")
+name = "crunchy"

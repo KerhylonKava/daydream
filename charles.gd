@@ -9,3 +9,18 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+	
+@onready var profile = 1
+#@onready var taste : taste
+#@onready var texture : texture
+#@onready var personality : personality
+
+func refresh_tastes(profile):
+	if profile == 1:
+		taste = "sweet"
+		texture = "crunchy"
+		personality = "scared"
+	elif profile == 2:
+		taste = "salty"
+		texture = "chewy"
+		personality = "violent"

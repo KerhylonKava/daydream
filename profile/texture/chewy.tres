@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="texture" load_steps=2 format=3 uid="uid://cf1m3hle8oagx"]
+
+[ext_resource type="Script" path="res://profile/texture/texture.gd" id="1_2rllk"]
+
+[resource]
+script = ExtResource("1_2rllk")
+name = "chewy"

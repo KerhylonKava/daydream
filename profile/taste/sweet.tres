@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="taste" load_steps=2 format=3 uid="uid://cxrsderp0bwlo"]
+
+[ext_resource type="Script" path="res://profile/taste/taste.gd" id="1_dnkc1"]
+
+[resource]
+script = ExtResource("1_dnkc1")
+name = "sweet"
