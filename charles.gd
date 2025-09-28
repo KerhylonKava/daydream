@@ -1,6 +1,6 @@
 extends Node2D
-
-
+var SootSprite = null
+var player_in_area = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$AnimationPlayer.play("charles_animation")
@@ -8,7 +8,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if player_in_area:
+		$Label.visible = true
 	
 @onready var profile = 1
 #@onready var taste : taste
@@ -23,3 +24,13 @@ func _process(delta: float) -> void:
 #		taste = "salty"
 #		texture = "chewy"
 #		personality = "violent"
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.has_method("player"):
+		player_in_area = true
+
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	if body.has_method("player"):
+		player_in_area = false
